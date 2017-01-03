@@ -13,7 +13,7 @@ Game.prototype = {
             that.update();
             that.draw();
         }
-        setInterval(drawWrapper, 33);
+        setInterval(drawWrapper, 3000);
     },
 
     draw: function() {

@@ -10,21 +10,21 @@ Game.prototype = {
         console.log(this.snake);
         var that = this;
         var drawWrapper = function() {
+            that.update();
             that.draw();
         }
-        setInterval(drawWrapper, 100);
+        setInterval(drawWrapper, 33);
     },
 
     draw: function() {
-        console.log("drwa");
+        this.ctx.clearRect(0, 0, this.snakevas.width, this.snakevas.height)
         this.ctx.beginPath();
         this.snake.draw(this.ctx);
         this.ctx.stroke();
     },
 
-    process: function() {
-        console.log("stuff");
-        this.draw();
+    update: function() {
+        this.snake.update();
     }
 
 };
